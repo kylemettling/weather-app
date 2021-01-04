@@ -1,4 +1,4 @@
-let API_KEY = process.env.API_KEY;
+let API_KEY = env.API_KEY;
 
 function onSubmit() {
   getCity.value === ""
