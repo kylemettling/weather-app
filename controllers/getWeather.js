@@ -13,8 +13,8 @@ module.exports = {
       .then((data) => {
         // console.log(data);
         const weather = new Weather(data);
-        console.log(weather);
-        res.render("index.ejs");
+        console.log(weather.temp);
+        res.render("weather.ejs", { weather });
       });
     // .then();
     // res.redirect("/");
