@@ -1,113 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
-    <script src="https://kit.fontawesome.com/716385c864.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/716385c864.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Weather</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="main-con">
-        <h1 class="chooseCity">
-            Enter a U.S. city and state to get the current forecast
-        </h1>
-        <div class="inputGroup">
-            <input name='city' type="text" class="cityRequest" />
-            <select name='state' type="text" class="stateRequest">
-                <option value="AL">AL</option>
-                <option value="AK">AK</option>
-                <option value="AR">AR</option>
-                <option value="AZ">AZ</option>
-                <option value="CA">CA</option>
-                <option value="CO">CO</option>
-                <option value="CT">CT</option>
-                <option value="DC">DC</option>
-                <option value="DE">DE</option>
-                <option value="FL">FL</option>
-                <option value="GA">GA</option>
-                <option value="HI">HI</option>
-                <option value="IA">IA</option>
-                <option value="ID">ID</option>
-                <option value="IL">IL</option>
-                <option value="IN">IN</option>
-                <option value="KS">KS</option>
-                <option value="KY">KY</option>
-                <option value="LA">LA</option>
-                <option value="MA">MA</option>
-                <option value="MD">MD</option>
-                <option value="ME">ME</option>
-                <option value="MI">MI</option>
-                <option value="MN">MN</option>
-                <option value="MO">MO</option>
-                <option value="MS">MS</option>
-                <option value="MT">MT</option>
-                <option value="NC">NC</option>
-                <option value="NE">NE</option>
-                <option value="NH">NH</option>
-                <option value="NJ">NJ</option>
-                <option value="NM">NM</option>
-                <option value="NV">NV</option>
-                <option value="NY">NY</option>
-                <option value="ND">ND</option>
-                <option value="OH">OH</option>
-                <option value="OK">OK</option>
-                <option value="OR">OR</option>
-                <option value="PA">PA</option>
-                <option value="RI">RI</option>
-                <option value="SC">SC</option>
-                <option value="SD">SD</option>
-                <option value="TN">TN</option>
-                <option value="TX">TX</option>
-                <option value="UT">UT</option>
-                <option value="VT">VT</option>
-                <option value="VA">VA</option>
-                <option value="WA">WA</option>
-                <option value="WI">WI</option>
-                <option value="WV">WV</option>
-                <option value="WY">WY</option>
-            </select>
-            <button class="submit">Get Weather</button>
-        </div>
-        <!-- <div class="outputContainer"> -->
-        <span>
-            <%= weather.temp %>
-        </span>
-        <div class="outputGroup">
-            <span class="cityOutput"></span>
-            <div class="weatherOutput">
-                <div class="outputCats">
-                    <div class="tempCurrent-static">Current temp:
-                    </div>
-                    <div class="weatherType-static">Conditions:</div>
-                    <div class="tempMax-static">High:</div>
-                    <div class="tempMin-static">Low:</div>
-                    <div class="windSpeed-static">Wind Speed:</div>
-                    <div class="windDeg-static"></div>
-                </div>
-                <div class="buffer"></div>
-                <div class="outputInfo">
-                    <div class="tempCurrent"></div>
-                    <div class="condition-con">
-                        <div class="weatherType"></div>
-                        <img class="weather-icon" />
-                    </div>
-                    <div class="tempMax"></div>
-                    <div class="tempMin"></div>
-                    <div class="wind-con">
-                        <div class="windSpeed"></div>
-                        <i class="windDir fas fa-long-arrow-alt-up"></i>
-                        <!-- <div class="windDeg"></div> -->
-                    </div>
-                </div>
+      <h1 class="chooseCity">
+        Enter a U.S. city and state to get the current forecast
+      </h1>
+      <div class="inputGroup">
+        <input name="city" type="text" class="cityRequest" />
+        <select name="state" type="text" class="stateRequest">
+          <option value="AL">AL</option>
+          <option value="AK">AK</option>
+          <option value="AR">AR</option>
+          <option value="AZ">AZ</option>
+          <option value="CA">CA</option>
+          <option value="CO">CO</option>
+          <option value="CT">CT</option>
+          <option value="DC">DC</option>
+          <option value="DE">DE</option>
+          <option value="FL">FL</option>
+          <option value="GA">GA</option>
+          <option value="HI">HI</option>
+          <option value="IA">IA</option>
+          <option value="ID">ID</option>
+          <option value="IL">IL</option>
+          <option value="IN">IN</option>
+          <option value="KS">KS</option>
+          <option value="KY">KY</option>
+          <option value="LA">LA</option>
+          <option value="MA">MA</option>
+          <option value="MD">MD</option>
+          <option value="ME">ME</option>
+          <option value="MI">MI</option>
+          <option value="MN">MN</option>
+          <option value="MO">MO</option>
+          <option value="MS">MS</option>
+          <option value="MT">MT</option>
+          <option value="NC">NC</option>
+          <option value="NE">NE</option>
+          <option value="NH">NH</option>
+          <option value="NJ">NJ</option>
+          <option value="NM">NM</option>
+          <option value="NV">NV</option>
+          <option value="NY">NY</option>
+          <option value="ND">ND</option>
+          <option value="OH">OH</option>
+          <option value="OK">OK</option>
+          <option value="OR">OR</option>
+          <option value="PA">PA</option>
+          <option value="RI">RI</option>
+          <option value="SC">SC</option>
+          <option value="SD">SD</option>
+          <option value="TN">TN</option>
+          <option value="TX">TX</option>
+          <option value="UT">UT</option>
+          <option value="VT">VT</option>
+          <option value="VA">VA</option>
+          <option value="WA">WA</option>
+          <option value="WI">WI</option>
+          <option value="WV">WV</option>
+          <option value="WY">WY</option>
+        </select>
+        <button class="submit">Get Weather</button>
+      </div>
+      <span> <%= weather.temp %> </span>
+      <div class="outputGroup">
+        <span class="cityOutput"></span>
+        <div class="weatherOutput">
+          <div class="outputCats">
+            <div class="tempCurrent-static">Current temp:</div>
+            <div class="weatherType-static">Conditions:</div>
+            <div class="tempMax-static">High:</div>
+            <div class="tempMin-static">Low:</div>
+            <div class="windSpeed-static">Wind Speed:</div>
+            <div class="windDeg-static"></div>
+          </div>
+          <div class="buffer"></div>
+          <div class="outputInfo">
+            <div class="tempCurrent"></div>
+            <div class="condition-con">
+              <div class="weatherType"></div>
+              <img class="weather-icon" />
             </div>
+            <div class="tempMax"></div>
+            <div class="tempMin"></div>
+            <div class="wind-con">
+              <div class="windSpeed"></div>
+              <i class="windDir fas fa-long-arrow-alt-up"></i>
+              <!-- <div class="windDeg"></div> -->
+            </div>
+          </div>
         </div>
-        <span class="openWeather">Data powered by
-            <a href="https://openweathermap.org/">openweathermap.org</a> API</span>
+      </div>
+      <span class="openWeather"
+        >Data powered by
+        <a href="https://openweathermap.org/">openweathermap.org</a> API</span
+      >
     </div>
     <script type="text/javascript" src="js/main.js"></script>
-</body>
-
+  </body>
 </html>

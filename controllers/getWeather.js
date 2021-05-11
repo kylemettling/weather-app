@@ -4,8 +4,9 @@ require("dotenv").config({ path: `./config/process.env` });
 const API_KEY = process.env.API_KEY;
 module.exports = {
   getWeather: (req, res) => {
+    console.log(req.body);
     const { city, state } = req.params;
-    // let weather;
+    console.log(city, state);
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city},${state},USA&units=imperial&appid=${API_KEY}`
     )
@@ -13,11 +14,9 @@ module.exports = {
       .then((data) => {
         // console.log(data);
         const weather = new Weather(data);
-        console.log(weather.temp);
+        console.log(weather);
         res.render("weather.ejs", { weather });
       });
-    // .then();
-    // res.redirect("/");
   },
   resWeather: (req, res) => {
     res.render("weather.ejs", { weather });

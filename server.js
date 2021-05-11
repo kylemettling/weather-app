@@ -13,8 +13,10 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+console.log(API_KEY);
+
 app.get("/", homeRoutes);
 app.get("/getWeather/:city/:state", weatherRoutes);
-app.get("/weather", weatherRoutes);
+// app.get("/weather", weatherRoutes);
 
 app.listen(PORT, console.log(`Server running on port: ${PORT}`));
