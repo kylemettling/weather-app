@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     <script
       src="https://kit.fontawesome.com/716385c864.js"
       crossorigin="anonymous"
@@ -14,7 +14,7 @@
   <body>
     <div class="main-con">
       <h1 class="chooseCity">
-        Enter a U.S. city and state to get the current forecast
+        Enter a U.S. city and state to retrieve the weather
       </h1>
       <div class="inputGroup">
         <input name="city" type="text" class="cityRequest" />
@@ -73,6 +73,32 @@
         </select>
         <button class="submit">Get Weather</button>
       </div>
+      <div class="result"><%= !weather ? '' : weather %></div>
+      <!-- <span class="cityOutput"></span>
+      <div class="weatherOutput hidden">
+        <div class="outputCats">
+          <div class="tempCurrent-static"></div>
+          <div class="weatherType-static">Conditions:</div>
+          <div class="tempMax-static">High:</div>
+          <div class="tempMin-static">Low:</div>
+          <div class="windSpeed-static">Wind Speed:</div>
+          <div class="windDeg-static"></div>
+        </div>
+        <div class="buffer"></div>
+        <div class="outputInfo">
+          <div class="tempCurrent"></div>
+          <div class="condition-con">
+            <div class="weatherType"></div>
+            <img class="weather-icon" />
+          </div>
+          <div class="tempMax"></div>
+          <div class="tempMin"></div>
+          <div class="wind-con">
+            <div class="windSpeed"></div>
+            <i class="windDir fas fa-long-arrow-alt-up"></i>
+          </div>
+        </div>
+      </div> -->
       <span class="openWeather"
         >Data powered by
         <a href="https://openweathermap.org/">openweathermap.org</a> API</span

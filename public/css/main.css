@@ -108,5 +108,8 @@ html {
   bottom: 1%;
 }
 .openWeather a {
-  color: white;
+  /* color: white; */
+  color: #eb6e4b;
+}
+.openWeather a:hover {
 }

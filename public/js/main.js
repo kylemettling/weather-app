@@ -19,22 +19,28 @@ let response;
 let temp, icon, weatherType, city, max, min;
 let tempChoice = "f";
 
+// async function showIt() {
+//   console.log(await result);
+// }
+// showIt();
+
 function onSubmit() {
   getCity.value === ""
     ? alert("Please enter a valid city name")
     : (city = getCity.value),
     (state = getState.value),
     (city = toTitleCase(city)),
-    // console.log(city, state);
     getWeather(),
     (getCity.value = "");
 }
 async function getWeather() {
   console.log(city, state);
   response = await fetch(`/getWeather/${city}/${state}`, (req, res) => {
-    // req.body = { city, state };
     console.log("request sent");
     res.json("sent");
+  }).then(() => {
+    const result = document.querySelector(".result").innerHTML;
+    console.log(result);
   });
   //   response = await fetch(
   //     `https://api.openweathermap.org/data/2.5/weather?q=${city},${state},USA&units=imperial&appid=${API_KEY}`

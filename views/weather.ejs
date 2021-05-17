@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     <script
       src="https://kit.fontawesome.com/716385c864.js"
       crossorigin="anonymous"
@@ -14,7 +14,7 @@
   <body>
     <div class="main-con">
       <h1 class="chooseCity">
-        Enter a U.S. city and state to get the current forecast
+        Enter a U.S. city and state to get current conditions
       </h1>
       <div class="inputGroup">
         <input name="city" type="text" class="cityRequest" />
@@ -73,7 +73,7 @@
         </select>
         <button class="submit">Get Weather</button>
       </div>
-      <span> <%= weather.temp %> </span>
+      <span class="result"> <%= weather %> </span>
       <div class="outputGroup">
         <span class="cityOutput"></span>
         <div class="weatherOutput">
