@@ -35,10 +35,7 @@ function onSubmit() {
 }
 async function getWeather() {
   console.log(city, state);
-  response = await fetch(`/getWeather/${city}/${state}`, (req, res) => {
-    console.log("request sent");
-    res.json("sent");
-  }).then(() => {
+  response = await fetch(`/${city}/${state}`).then((res) => {
     const result = document.querySelector(".result").innerHTML;
     console.log(result);
   });

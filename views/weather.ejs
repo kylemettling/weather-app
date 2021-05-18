@@ -73,7 +73,7 @@
         </select>
         <button class="submit">Get Weather</button>
       </div>
-      <span class="result"> <%= weather %> </span>
+      <div class="result"><%= !temp ? 'weather' : temp %></div>
       <div class="outputGroup">
         <span class="cityOutput"></span>
         <div class="weatherOutput">

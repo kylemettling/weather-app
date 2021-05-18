@@ -8,7 +8,6 @@ const API_KEY = process.env.API_KEY;
 const PORT = process.env.PORT || 5500;
 
 app.set("view-engine", "ejs");
-// app.set("views", path.join(__dirname, "vews"));
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -16,7 +15,7 @@ app.use(express.json());
 console.log(API_KEY);
 
 app.get("/", homeRoutes);
-app.get("/getWeather/:city/:state", weatherRoutes);
+app.get("/:city/:state", weatherRoutes);
 // app.get("/weather", weatherRoutes);
 
 app.listen(PORT, console.log(`Server running on port: ${PORT}`));
