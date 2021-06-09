@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Today's Weather
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A live weather app to preview conditions of any U.S. city. Provides realtime temps, cloud, and wind speed/direction.
 
-## Available Scripts
+**Link to project:** https://wonders-weather.netlify.app/
 
-In the project directory, you can run:
+![alt tag](/public/img/pic01.png)
 
-### `npm start`
+## How It's Made:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Tech used:** HTML, CSS, JavaScript, Node.js, Express
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A somewhat simple Node.js app that takes in user city, state choice on the client side. This app talks to OpenWeatherMap's API and brings back info related to the user's requested selection. It presents the data to the user, providing weather details including variably color-coded temperature, wind speed/direction and appropriate weather condition icon.
 
-### `npm test`
+## Optimizations
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The original build was a client-side only implementation. In order to access the public API and keep keys secret, the project needed to transform into a server architecture. Implemented a node server to handle requests from the front end and abstract the secrets away from the client-side.
 
-### `npm run build`
+## Lessons Learned:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It was a great opportunity to work with a public API driven by client-side input. It was also a fun challenge to hook up a node server to handle the initial request and then hands it off to another request reflecting the original build but also helps keep the project's secrets just that.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Examples:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Take a look at other examples in my portfolio:
 
-### `npm run eject`
+**Baseball Pitch Guesser:** https://github.com/alecortega/palettable
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**theNunGram:** https://github.com/alecortega/twitter-battle
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Codewars Solutions:** https://github.com/alecortega/patch-panel
