@@ -17,7 +17,7 @@ export default function Home() {
   const [humidity, setHumidity] = useState("");
   const [windSpeed, setWindSpeed] = useState("");
   const [windDeg, setWindDeg] = useState("");
-  const [icon, setIcon] = useState("");
+  // const [icon, setIcon] = useState("");
   const [weatherResults, setWeatherResults] = useState(false);
   const [weatherDescription, setDescription] = useState("Weather Description");
   const { REACT_APP_API_KEY } = process.env;
@@ -48,7 +48,7 @@ export default function Home() {
     setHumidity(`${humidity}%`);
     setWindSpeed(`${Math.round(speed)}mph`);
     setWindDeg(deg);
-    setIcon(icon);
+    // setIcon(icon);
     setDescription(processDescription(icon, description));
     setWeatherResults(true);
   }
