@@ -197,7 +197,7 @@ export default function Home() {
               {weatherItems.map((item, index) => {
                 return (
                   <li id={item.value} key={item.text}>
-                    {item.text}
+                    {item.text}:
                   </li>
                 );
               })}
