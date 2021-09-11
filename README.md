@@ -2,7 +2,7 @@
 
 A live weather app to preview conditions of any U.S. city. Provides realtime temps, cloud, and wind speed/direction.
 
-**Link to project:** https://wonders-weather.netlify.app/
+**Live deployment =>** https://wonders-weather.netlify.app/
 
 ![alt tag](/public/img/pic01.png)
 
